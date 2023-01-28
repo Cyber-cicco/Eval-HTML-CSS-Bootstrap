@@ -1,18 +1,25 @@
 @use 'constants' as *;
 @use 'mixins' as *;
 
-@mixin diagonal-box($skewY){
-    background-image: linear-gradient(45deg, $secondary-color, lighten($main-color, 10));
+@mixin diagonal-box($skewY, $flex-direction, $gradient-direction){
+    background-image: linear-gradient(to $gradient-direction, $secondary-color, black);
     transform: skewY($skewY);
-    height: 200%;
-    margin-top: 10%;
+    height: 180%;
+    margin-top: 5%;
     margin-bottom: 10%;
     @include flex-center;
-    padding: 10%;
-
-    @media screen and (min-width : $main-treshold) {
-        font-size: 2em;
+    flex-direction: $flex-direction;
+    
+    @media  screen and (max-width : $secondary-treshold) {
+        @if($flex-direction == row-reverse){
+            flex-direction: column-reverse;
+        } @else {
+            flex-direction: column;
+        }
     }
+
+    flex-wrap:inherit;
+    padding: 10%;
 
     .box-content{
         margin: 0 auto;
@@ -20,31 +27,7 @@
         @include flex-center;
         flex-direction: column;
         justify-content: center;
-
-        .yt{
-            @media screen and (max-width : $main-treshold) {
-                width: 290px;
-                height: 172px;
-            }
-
-            @media screen and (min-width : $main-treshold) {
-                width: 530px;
-                height: 315px;
-            }
-
-            @media screen and (max-width : $low-treshold) {
-                  display: none;          
-            }
-        }
-
-        .low-link{
-            display: none;
-            @media screen and (max-width : $low-treshold) {
-                display: inline;
-                text-decoration: none;
-                color: black;                
-            }
-        }
+        width: 90%;
     }  
 }
 
@@ -55,9 +38,48 @@
 }
 
 .diagonal-box.left{
-    @include diagonal-box(-$skewYdeg);
+    @include diagonal-box(-$skewYdeg, row, left);
 }
 
 .diagonal-box.right{
-    @include diagonal-box($skewYdeg);
+    @include diagonal-box($skewYdeg, row-reverse, right);
+}
+
+.yt{
+    @media screen and (max-width : $main-treshold) {
+        width: 290px;
+        height: 172px;
+    }
+
+    @media screen and (min-width : $main-treshold) {
+        width: 530px;
+        height: 315px;
+    }
+
+    @media screen and (max-width : $low-treshold) {
+          display: none;          
+    }
+}
+
+.low-link{
+    display: none;
+    @media screen and (max-width : $low-treshold) {
+        display: inline;
+        text-decoration: none;
+        color: black;                
+    }
+}
+
+.img{
+    opacity: 0.3;
+    width: auto;
+    height: 100%;
+    @media screen and (max-width : $secondary-treshold) {
+        height: auto;
+        max-height: 90%;
+        width: 100%;
+    }
+    position: absolute;
+    z-index: -1;
+    justify-self: flex-end;
 }

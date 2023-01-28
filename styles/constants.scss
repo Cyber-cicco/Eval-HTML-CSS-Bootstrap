@@ -10,10 +10,11 @@ $text-secondary-color : black;
 $backgroundURL : url("./images/poker-background.png");
 
 //constantes de media queries
-$main-treshold : 900px;
+$main-treshold : 1000px;
 $secondary-treshold : 600px;
 $low-treshold: 380px;
 
 //constantes de tailles des éléments:
 $navbar-height : 80px;
-$skewYdeg : 8deg;
+$skewYdeg : 5deg;
+$font-size : 25px;

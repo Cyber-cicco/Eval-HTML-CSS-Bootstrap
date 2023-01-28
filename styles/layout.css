@@ -4,6 +4,17 @@ body {
   margin: 0%;
   display: flex;
   flex-direction: column;
+  font-size: 25px;
+}
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 32.5px;
+  }
 }
 
 .background {
