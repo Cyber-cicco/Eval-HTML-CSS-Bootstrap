@@ -1,7 +1,13 @@
 //couleurs principales du site. Vont changer avec l'affinement de la 
 //charte graphique
-$main-color : #d53b1e;
+//$main-color : #d53b1e;
+$main-color : #e44008;
 $text-main-color: white;
-$secondary-color : green;
+$secondary-color : #4aa04f;
 $text-secondary-color : black;
+
+//image d'arrière plan
 $backgroundURL : url("./images/poker-background.png");
+
+//constantes de media queries
+$main-treshold : 900px;

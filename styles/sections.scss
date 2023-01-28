@@ -1,0 +1,12 @@
+@use 'constants' as *;
+@use 'mixins' as *;
+
+.main-section{
+    @include flex-center();
+    flex-direction: column;
+
+}
+
+.diagonal-box.left{
+    @include diagonal-box(-11);
+}

@@ -1,23 +1,23 @@
 @use "constants" as *;
+@use "mixins" as *;
 
 .header{
     display: flex;
-    background-color: $main-color;
+    background-color: darken($main-color, 10);
     width: 100%;
     height: 80px;
 
     .main-title{
-        display: flex;
+        @include flex-center;
         justify-content: left;
-        align-items: center;
         padding-left: 20px;
     
-        @media screen and (max-width : 900px) {
+        @media screen and (max-width : $main-treshold) {
             width: 67%;
             font-size: 1.3em;
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: $main-treshold) {
             width: 35%;
         }
     }
@@ -25,31 +25,58 @@
     .navbar{
         display: flex;
         
-        @media screen and (max-width : 900px) {
+        @media screen and (max-width : $main-treshold) {
             width: 33%;
             font-size: 0.8em;
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: $main-treshold) {
             width: 65%;
         }
     }
 }
 
+.nav-sm{
+    display: none;
+    @media screen and (max-width : $main-treshold){
+        display: flex;
+    }
+}
 
 
 .nav-lg{
-    display: flex;
+    @include flex-center;
     justify-content: space-around;
     width: 100%;
-    align-items: center;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: $main-treshold) {
         display: none;
     }
+
+    .link-container{
+        padding: 40px;
+        height: 90%;
+
+        .nav-link{
+            @include flex-center;
+            padding-left: 10px;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
 }
 
 .navbar{
     width: 100%;
 
 }
+
+

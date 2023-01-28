@@ -1,7 +1,7 @@
 @use "constants" as *;
 
 body{
-    background-color: $main-color;
+    background-color: lighten($main-color, 10);
     color: $text-main-color;
     margin: 0%;
 }

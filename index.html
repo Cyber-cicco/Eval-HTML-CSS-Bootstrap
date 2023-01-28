@@ -17,9 +17,9 @@
         <h1 class="main-title">Free Competitive Poker</h1>
         <nav class="navbar">
             <li class="nav-lg">
-                <ul>Accueil</ul>
-                <ul>Événements</ul>
-                <ul>Articles</ul>
+                <ul class="link-container"><a href="#" class="nav-link">Accueil</a></ul>
+                <ul class="link-container"><a href="#" class="nav-link">Événements</a></ul>
+                <ul class="link-container"><a href="#" class="nav-link">Articles</a></ul>
             </li>
             <div class="nav-sm">
                 <div class="hambline"></div>
@@ -28,8 +28,8 @@
             </div>
         </nav>
     </header>
-    <main>
-        <article>
+    <main class="main-section">
+        <article class="diagonal-box right">
             <h2>Qui sommes-nous?</h2>
             <p>
                 Free Competitive Poker est une association d'anciens joueurs pro et semi-pros souhaitant
@@ -38,14 +38,16 @@
                 minimiser leurs pertes.
             </p>
         </article>
-        <section>
-            <h3>Un nouveau solver OpenSource</h3>
-            <p>
-                Pour travailler leur jeu, les professionnels du poker ont pour principal outil le solver, un logiciel leur permettant de calculer la meilleure
-                stratégie possible pour maximiser leurs chances de gain. Problème, ces logiciels étaient tous payants. Mais plus maintenant! Une communauté de
-                programmeurs avertis a sorti il y a quelques temps un tout nouveau solver OpenSource!
-            </p>
-            <a href="https://github.com/bupticybee/TexasSolver">Le solver en question</a>
+        <section class="diagonal-box left">
+            <div class="diagonal-box right">
+                <h3>Un nouveau solver OpenSource</h3>
+                <p>
+                    Pour travailler leur jeu, les professionnels du poker ont pour principal outil le solver, un logiciel leur permettant de calculer la meilleure
+                    stratégie possible pour maximiser leurs chances de gain. Problème, ces logiciels étaient tous payants. Mais plus maintenant! Une communauté de
+                    programmeurs avertis a sorti il y a quelques temps un tout nouveau solver OpenSource!
+                </p>
+                <a href="https://github.com/bupticybee/TexasSolver">Le solver en question</a>
+            </div>
         </section>
         <section>
             <h3>Stratégie au poker : la GTO pour les noobs</h3>
