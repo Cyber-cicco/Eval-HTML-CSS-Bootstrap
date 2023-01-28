@@ -4,6 +4,8 @@ body{
     background-color: lighten($main-color, 10);
     color: $text-main-color;
     margin: 0%;
+    display: flex;
+    flex-direction: column;
 }
 
 .background{

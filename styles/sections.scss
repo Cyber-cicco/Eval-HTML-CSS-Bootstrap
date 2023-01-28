@@ -1,12 +1,30 @@
 @use 'constants' as *;
 @use 'mixins' as *;
 
+@mixin diagonal-box($skewY){
+    background-image: linear-gradient(45deg, $secondary-color, lighten($main-color, 10));
+    transform: skewY($skewY);
+    height: 500px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    @include flex-center;
+    .box-content{
+        margin: 0 auto;
+        transform: skewY($skewY * -1);
+    }
+}
+
+
 .main-section{
-    @include flex-center();
+    @include flex-center;
     flex-direction: column;
 
 }
 
 .diagonal-box.left{
-    @include diagonal-box(-11);
+    @include diagonal-box(-$skewYdeg);
+}
+
+.diagonal-box.right{
+    @include diagonal-box($skewYdeg);
 }

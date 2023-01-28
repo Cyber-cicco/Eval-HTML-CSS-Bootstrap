@@ -2,6 +2,8 @@ body {
   background-color: #f75c28;
   color: white;
   margin: 0%;
+  display: flex;
+  flex-direction: column;
 }
 
 .background {
