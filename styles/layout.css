@@ -1,4 +1,15 @@
 body {
   background-color: #d53b1e;
   color: white;
+}
+
+.background {
+  background-image: url("./images/poker-background.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  opacity: 0.5;
+  z-index: -1;
 }/*# sourceMappingURL=layout.css.map */

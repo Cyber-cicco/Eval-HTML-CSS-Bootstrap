@@ -1,9 +1,22 @@
+//déclaration des constantes
 $main-color : #d53b1e;
 $text-main-color: white;
 $secondary-color : green;
 $text-secondary-color : black;
+$backgroundURL : url("./images/poker-background.png");
 
 body{
     background-color: $main-color;
     color: $text-main-color;
+}
+
+.background{
+    background-image: $backgroundURL;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    opacity: 0.5;
+    z-index: -1;
 }
