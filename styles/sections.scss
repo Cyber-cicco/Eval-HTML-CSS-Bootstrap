@@ -4,21 +4,54 @@
 @mixin diagonal-box($skewY){
     background-image: linear-gradient(45deg, $secondary-color, lighten($main-color, 10));
     transform: skewY($skewY);
-    height: 500px;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    height: 200%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     @include flex-center;
+    padding: 10%;
+
+    @media screen and (min-width : $main-treshold) {
+        font-size: 2em;
+    }
+
     .box-content{
         margin: 0 auto;
         transform: skewY($skewY * -1);
-    }
+        @include flex-center;
+        flex-direction: column;
+        justify-content: center;
+
+        .yt{
+            @media screen and (max-width : $main-treshold) {
+                width: 290px;
+                height: 172px;
+            }
+
+            @media screen and (min-width : $main-treshold) {
+                width: 530px;
+                height: 315px;
+            }
+
+            @media screen and (max-width : $low-treshold) {
+                  display: none;          
+            }
+        }
+
+        .low-link{
+            display: none;
+            @media screen and (max-width : $low-treshold) {
+                display: inline;
+                text-decoration: none;
+                color: black;                
+            }
+        }
+    }  
 }
 
 
 .main-section{
     @include flex-center;
     flex-direction: column;
-
 }
 
 .diagonal-box.left{

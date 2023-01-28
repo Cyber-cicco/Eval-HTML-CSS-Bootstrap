@@ -7,27 +7,101 @@
 .diagonal-box.left {
   background-image: linear-gradient(45deg, #4aa04f, #f75c28);
   transform: skewY(-8deg);
-  height: 500px;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  height: 200%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
   align-items: center;
+  padding: 10%;
+}
+@media screen and (min-width: 900px) {
+  .diagonal-box.left {
+    font-size: 2em;
+  }
 }
 .diagonal-box.left .box-content {
   margin: 0 auto;
   transform: skewY(8deg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .diagonal-box.left .box-content .yt {
+    width: 290px;
+    height: 172px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .diagonal-box.left .box-content .yt {
+    width: 530px;
+    height: 315px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .diagonal-box.left .box-content .yt {
+    display: none;
+  }
+}
+.diagonal-box.left .box-content .low-link {
+  display: none;
+}
+@media screen and (max-width: 380px) {
+  .diagonal-box.left .box-content .low-link {
+    display: inline;
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .diagonal-box.right {
   background-image: linear-gradient(45deg, #4aa04f, #f75c28);
   transform: skewY(8deg);
-  height: 500px;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  height: 200%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
   align-items: center;
+  padding: 10%;
+}
+@media screen and (min-width: 900px) {
+  .diagonal-box.right {
+    font-size: 2em;
+  }
 }
 .diagonal-box.right .box-content {
   margin: 0 auto;
   transform: skewY(-8deg);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .diagonal-box.right .box-content .yt {
+    width: 290px;
+    height: 172px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .diagonal-box.right .box-content .yt {
+    width: 530px;
+    height: 315px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .diagonal-box.right .box-content .yt {
+    display: none;
+  }
+}
+.diagonal-box.right .box-content .low-link {
+  display: none;
+}
+@media screen and (max-width: 380px) {
+  .diagonal-box.right .box-content .low-link {
+    display: inline;
+    text-decoration: none;
+    color: black;
+  }
 }/*# sourceMappingURL=sections.css.map */
