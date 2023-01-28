@@ -1,0 +1,9 @@
+$main-color : #d53b1e;
+$text-main-color: white;
+$secondary-color : green;
+$text-secondary-color : black;
+
+body{
+    background-color: $main-color;
+    color: $text-main-color;
+}
