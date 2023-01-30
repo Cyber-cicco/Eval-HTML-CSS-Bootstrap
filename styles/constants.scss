@@ -18,3 +18,14 @@ $low-treshold: 380px;
 $navbar-height : 80px;
 $skewYdeg : 5deg;
 $font-size : 25px;
+
+//fonts
+@font-face {
+    font-family: montserat;
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: coromorant;
+    src: url(fonts/CormorantGaramond-Medium.ttf);
+}
