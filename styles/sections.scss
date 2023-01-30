@@ -1,9 +1,9 @@
 @use 'constants' as *;
 @use 'mixins' as *;
 
-@mixin diagonal-box($skewY, $flex-direction, $gradient-direction){
-    background: rgba(28, 111, 60, 50%);
-
+@mixin diagonal-box($skewY, $flex-direction, $gradient-direction, $b-color, $t-color){
+    background: rgba($color : $b-color, $alpha : 0.50);
+    color: $t-color;
     transform: skewY($skewY);
     height: 180%;
     margin-top: 5%;
@@ -41,11 +41,11 @@
 }
 
 .diagonal-box.left{
-    @include diagonal-box(-$skewYdeg, row, left);
+    @include diagonal-box($skewYdeg, row-reverse, right, black, white);
 }
 
 .diagonal-box.right{
-    @include diagonal-box($skewYdeg, row-reverse, right);
+    @include diagonal-box(-$skewYdeg, row, left, $secondary-color, black);
 }
 
 .yt, .map{
@@ -87,7 +87,7 @@
     justify-self: flex-end;
 }
 a{
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
 }
 

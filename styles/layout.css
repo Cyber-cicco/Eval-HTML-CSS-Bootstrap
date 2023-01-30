@@ -32,4 +32,11 @@ body {
 
 h1 {
   text-align: center;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: black;
 }/*# sourceMappingURL=layout.css.map */
