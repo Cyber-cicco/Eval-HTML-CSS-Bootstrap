@@ -40,6 +40,7 @@
 
 .nav-sm {
   display: none;
+  background-color: black;
 }
 @media screen and (max-width: 1000px) {
   .nav-sm {
@@ -66,6 +67,7 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  list-style-type: none;
 }
 @media screen and (max-width: 1000px) {
   .nav-lg {

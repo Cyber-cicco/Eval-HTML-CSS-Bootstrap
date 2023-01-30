@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: black;
 }
 
 .diagonal-box.left {
-  background-image: linear-gradient(to left, #4aa04f, black);
+  background: rgba(28, 111, 60, 0.5);
   transform: skewY(-5deg);
   height: 180%;
   margin-top: 5%;
@@ -22,6 +23,7 @@
   }
 }
 .diagonal-box.left .box-content {
+  opacity: 2;
   margin: 0 auto;
   transform: skewY(5deg);
   display: flex;
@@ -32,7 +34,7 @@
 }
 
 .diagonal-box.right {
-  background-image: linear-gradient(to right, #4aa04f, black);
+  background: rgba(28, 111, 60, 0.5);
   transform: skewY(5deg);
   height: 180%;
   margin-top: 5%;
@@ -49,6 +51,7 @@
   }
 }
 .diagonal-box.right .box-content {
+  opacity: 2;
   margin: 0 auto;
   transform: skewY(-5deg);
   display: flex;
@@ -101,4 +104,9 @@
     max-height: 90%;
     width: 100%;
   }
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=sections.css.map */
