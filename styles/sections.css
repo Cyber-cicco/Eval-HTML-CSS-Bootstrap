@@ -62,19 +62,19 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .yt {
+  .yt, .map {
     width: 290px;
     height: 172px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .yt {
+  .yt, .map {
     width: 530px;
     height: 315px;
   }
 }
 @media screen and (max-width: 380px) {
-  .yt {
+  .yt, .map {
     display: none;
   }
 }
@@ -109,4 +109,23 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+.article {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-top: 150px;
+  margin-bottom: 75px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1000px) {
+  .article {
+    width: 60%;
+  }
 }/*# sourceMappingURL=sections.css.map */

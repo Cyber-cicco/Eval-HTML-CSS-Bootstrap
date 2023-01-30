@@ -1,10 +1,11 @@
 @use "constants" as *;
+@use "mixins" as *;
 
 body{
     background-color: lighten($main-color, 10);
     color: $text-main-color;
     margin: 0%;
-    display: flex;
+    @include flex-center;
     flex-direction: column;
     font-size: $font-size;
     @media screen and (min-width : $main-treshold) {
@@ -26,4 +27,8 @@ body{
     opacity: 0.5;
     z-index: -1;
     
+}
+
+h1{
+    text-align: center;
 }
