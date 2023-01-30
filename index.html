@@ -21,12 +21,17 @@
                 <li class="link-container"><a href="#" class="nav-link">Événements</a></li>
                 <li class="link-container"><a href="#" class="nav-link">Articles</a></li>
             </ul>
-            <button class="nav-sm">
+            <button class="nav-sm" onclick="document.querySelector('#menu-deroulant').hidden = !document.querySelector('#menu-deroulant').hidden">
                 <div class="hambline"></div>
                 <div class="hambline"></div>
                 <div class="hambline"></div>
             </button>
         </nav>
+        <ul id="menu-deroulant" class="menu-deroulant" hidden="true">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Événements</a></li>
+            <li><a href="#">Article</a></li>
+        </ul>
     </header>
     <div class="navbar-padder"></div>
     <main class="main-section">

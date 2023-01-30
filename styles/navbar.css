@@ -62,12 +62,31 @@
   }
 }
 
+.menu-deroulant {
+  background-color: black;
+  position: fixed;
+  top: 80px;
+  margin: 0;
+  right: 0%;
+  list-style-type: none;
+  font-size: 1.2em;
+}
+.menu-deroulant li {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 15px;
+  border-color: grey;
+}
+
 .nav-lg {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   list-style-type: none;
+  height: 80%;
+  align-self: center;
 }
 @media screen and (max-width: 1000px) {
   .nav-lg {
@@ -75,7 +94,6 @@
   }
 }
 .nav-lg .link-container {
-  padding: 40px;
   height: 90%;
 }
 .nav-lg .link-container .nav-link {
